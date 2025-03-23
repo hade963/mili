@@ -8,12 +8,9 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
-
-        <link rel="preload" as="style" href="http://free-gifts.42web.io/build/assets/app-BPnvfG_q.css">
-        <link rel="modulepreload" href="http://free-gifts.42web.io/build/assets/app-Cl5RxutH.js">
-        <link rel="stylesheet" href="http://free-gifts.42web.io/build/assets/app-BPnvfG_q.css">
-        <script type="module" src="http://free-gifts.42web.io/build/assets/app-Cl5RxutH.js"></script>
-            
+        @if(public_path('/resources/css/app.css') && public_path('/resources/js/app.js'))
+        @vite(["resources/css/app.css", 'resources/js/app.js'])
+        @endif
     </head>
     <body class=" bg-gray-200 h-screen w-screen flex justify-center items-center ">
         <div class="bg-white px-8 sm:px-16 py-4">

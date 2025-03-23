@@ -11,12 +11,9 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
-
-        <link rel="preload" as="style" href="http://free-gifts.42web.io//build/assets/app-BPnvfG_q.css">
-        <link rel="modulepreload" href="http://free-gifts.42web.io/build/assets/app-Cl5RxutH.js">
-        <link rel="stylesheet" href="http://free-gifts.42web.io/build/assets/app-BPnvfG_q.css">
-        <script type="module" src="http://free-gifts.42web.io/build/assets/app-Cl5RxutH.js"></script>
-            
+        @if(public_path('/resources/css/app.css') && public_path('/resources/js/app.js'))
+        @vite(["resources/css/app.css", 'resources/js/app.js'])
+        @endif
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
