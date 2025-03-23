@@ -23,7 +23,7 @@
             </div>
             <div class=" w-64 overflow-hidden rounded-full h-64">
                 @if(isset($page) && $page->page_image)
-                <img src="{{$page->page_image}}" alt="">
+                <img src="{{asset($page->page_image)}}" alt="">
                 @else 
                 <img src="{{asset('profile.png')}}" alt="">
                 @endif
